@@ -26,7 +26,7 @@ export default function Project({ project, index }: {project: any, index: number
                         ))}
                     </div>
                     <div className="project-links col-md-3">
-                        <a href="{{ project.github_url }}" className="link github-link">
+                        <a href={project.github_url} className="link github-link">
                             <i className="fa-brands fa-github"></i>
                         </a>
                     </div>
