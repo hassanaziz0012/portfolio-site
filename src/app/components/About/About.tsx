@@ -15,20 +15,22 @@ export default function About() {
                     </p>
 
                     <div className="hero-buttons mt-4">
-                        <button className="btn btn-secondary" style={{ borderColor: "#3B4252" }}>Download Resume</button>
+                        <button className="btn btn-secondary" style={{ borderColor: "#3B4252" }}>
+                            <a className='link' href="resume.pdf" style={{ background: "transparent", color: "var(--light-background-1)" }}>Download Resume</a>
+                        </button>
                     </div>
 
                     <div className="social-links mt-3">
-                        <a href="#" className="social-link github">
+                        <a href="https://github.com/hassanaziz0012" className="social-link github">
                             <i className="fa-brands fa-github"></i>
                         </a>
-                        <a href="#" className="social-link email">
+                        <a href="mailto:hassanaziz0012@gmail.com" className="social-link email">
                             <i className="fa-solid fa-envelope"></i>
                         </a>
-                        <a href="#" className="social-link discord">
+                        <a href="https://discord.gg/vf3Sa83A7t" className="social-link discord">
                             <i className="fa-brands fa-discord"></i>
                         </a>
-                        <a href="#" className="social-link twitter">
+                        <a href="https://twitter.com/itshassanaziz" className="social-link twitter">
                             <i className="fa-brands fa-twitter"></i>
                         </a>
                     </div>
