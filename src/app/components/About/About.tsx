@@ -6,10 +6,10 @@ export default function About() {
         <section className="hero d-flex align-items-center justify-content-center">
             <div className="row d-flex align-items-center justify-content-center container">
                 <div className="hero-section col-md-6">
-                    <h1>I'm Hassan</h1>
+                    <h1>I&apos;m Hassan</h1>
                     <h4>I build software.</h4>
                     <p>
-                        I'm a self-taught developer and have been writing code for 4 years now. During that time, I've built
+                        I&apos;m a self-taught developer and have been writing code for 4 years now. During that time, I&apos;ve built
                         everything from websites, automation scripts, and discord bots to APIs, desktop and mobile apps,
                         and more. I really enjoy programming and building cool stuff from just a text file.
                     </p>

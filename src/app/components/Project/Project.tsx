@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 export default function Project({ project, index }: {project: any, index: number}) {
@@ -7,7 +8,7 @@ export default function Project({ project, index }: {project: any, index: number
 
             { index % 2 == 1 ? (
                 <div className="col-lg-6 project-image">
-                    <img src={project.main_photo} alt="pisgcanfly" className="img-fluid" />
+                    <Image src={project.main_photo} alt="pisgcanfly" className="img-fluid" />
                 </div>
                 ) : null
             }
@@ -34,7 +35,7 @@ export default function Project({ project, index }: {project: any, index: number
 
             { index % 2 == 0 ? (
                 <div className="col-lg-6 project-image">
-                    <img src={project.main_photo} alt="pisgcanfly" className="img-fluid" />
+                    <Image src={project.main_photo} alt="pisgcanfly" className="img-fluid" />
                 </div>
             ) : null
             }

@@ -27,8 +27,8 @@ export default function Contact() {
                     <p className="text-center">
                         The best way to get in touch is Discord: <a className="link yellow-link"
                             href="https://discord.com/app">Hassan#3557</a>
-                        - I'm most active there.
-                        If that's not your thing, you can email me at <a className="link yellow-link" 
+                        - I&apos;m most active there.
+                        If that&apos;s not your thing, you can email me at <a className="link yellow-link" 
                             href="mailto:hassanaziz0012@gmail.com">hassanaziz0012@gmail.com</a>
                     </p>
                 </div>
