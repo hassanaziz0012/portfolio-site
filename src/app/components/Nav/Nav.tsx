@@ -7,7 +7,6 @@ export default function Nav() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleWidthChange = () => {
         setWidth(window.innerWidth);
-        console.log(width);
     }
 
     useEffect(() => {

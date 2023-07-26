@@ -7,7 +7,6 @@ export default function ThemeChangeButton() {
     const multiToggle = (elements: NodeListOf<Element>, classes: string[]) => {
         elements.forEach(elem => {
             classes.forEach(cls => {
-                console.log(elem, cls);
                 elem.classList.toggle(cls);
             });
         })
