@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from '../Nav/Nav'
+import SocialIcons from '../SocialIcons/SocialIcons'
 
 export default function About() {
     return (
@@ -20,19 +21,8 @@ export default function About() {
                         </button>
                     </div>
 
-                    <div className="social-links mt-3">
-                        <a href="https://github.com/hassanaziz0012" className="social-link github">
-                            <i className="fa-brands fa-github"></i>
-                        </a>
-                        <a href="mailto:hassanaziz0012@gmail.com" className="social-link email">
-                            <i className="fa-solid fa-envelope"></i>
-                        </a>
-                        <a href="https://discord.gg/vf3Sa83A7t" className="social-link discord">
-                            <i className="fa-brands fa-discord"></i>
-                        </a>
-                        <a href="https://twitter.com/itshassanaziz" className="social-link twitter">
-                            <i className="fa-brands fa-twitter"></i>
-                        </a>
+                    <div className="mt-3">
+                        <SocialIcons />
                     </div>
                 </div>
 

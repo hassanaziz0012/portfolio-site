@@ -1,4 +1,5 @@
 import React from 'react'
+import SocialIcons from '../SocialIcons/SocialIcons'
 
 export default function Contact() {
     return (
@@ -10,20 +11,10 @@ export default function Contact() {
                         Wanna talk to me about a project?
                     </p>
 
-                    <div className="social-links text-center">
-                        <a href="#" className="social-link github">
-                            <i className="fa-brands fa-github"></i>
-                        </a>
-                        <a href="#" className="social-link email">
-                            <i className="fa-solid fa-envelope"></i>
-                        </a>
-                        <a href="#" className="social-link discord">
-                            <i className="fa-brands fa-discord"></i>
-                        </a>
-                        <a href="#" className="social-link twitter">
-                            <i className="fa-brands fa-twitter"></i>
-                        </a>
+                    <div className="text-center">
+                        <SocialIcons />
                     </div>
+
                     <p className="text-center">
                         The best way to get in touch is Discord: <a className="link yellow-link"
                             href="https://discord.gg/vf3Sa83A7t">Hassan#3557</a>
