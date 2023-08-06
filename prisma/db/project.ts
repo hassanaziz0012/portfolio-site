@@ -6,6 +6,24 @@ export const getAllProjects = async () => {
     return projects;
 }
 
+export const getFeaturedProjects = async () => {
+    const projects = await prisma.project.findMany({
+        where: {
+            featured: true
+        }
+    })
+    return projects;
+}
+
+export const getProject = async (id) => {
+    const project = await prisma.project.findUnique({
+        where: {
+            id: parseInt(id)
+        }
+    })
+    return project;
+}
+
 function getBufferFromBytes(imageBytes: number[]): Buffer {
 
     let imageBuffer = new Buffer(imageBytes.length)
@@ -29,35 +47,54 @@ export const createProject = async (
         console.log("Saved image file.")
     })
 
-    // await prisma.recipe.create({
-    //     data: {
-    //         title,
-    //         description,
-    //         github_url,
-    //         tags,
-    //     }
-    // })
     return "project-images/img.png";
 }
 
-export const createDefaultProjects = async () => {
-    console.log("Creating default projects.")
-    const title = "PigsCanFly"
-    const description = (
-        "A small, e-commerce store for buying books and other products. Integrates with Stripe for payment processing.\r\n\r\nI custom-built this for a client so the product types are locked into their requirements, but everything else can easily be reused in a different project.\r\n\r\nTo get this working, you'll only need to add your own Stripe API key in settings.py, apply migrations, and run the project."
-        )
-    const github_url = "https://github.com/hassanaziz0012/pigscanfly"
-    const main_photo = "pigscanfly.png"
-    const tags = ["Django", "Stripe", "Ecommerce"]
-    await prisma.project.create({
+export const editProject = async (
+    id: number | any,
+    title: string,
+    description: string,
+    github_url: string,
+    live_url: string,
+    tags: string[],
+    main_photo: string,
+    photos?: File[]
+) => {
+    const result = await prisma.project.update({
+        where: {
+            id: parseInt(id)
+        },
         data: {
             title,
             description,
             github_url,
-            main_photo,
-            tags
+            live_url,
+            tags,
+            main_photo
         }
     })
+    return result;
+}
+
+export const createDefaultProjects = async () => {
+    console.log("Creating default projects.")
+    const resp = await fetch('http://localhost:3000/backup.json');
+    const data = await resp.json();
+    const projects = data.projects;
+    for (let i = 0; i < projects.length; i++) {
+        const proj = projects[i];
+        const result = await prisma.project.create({
+            data: {
+                title: proj.title,
+                description: proj.description,
+                github_url: proj.github_url,
+                live_url: proj.live_url,
+                main_photo: proj.main_photo,
+                tags: proj.tags
+            }
+        })
+        console.log(result);
+    }
 }
 
 export const deleteProject = async (id: number) => {
