@@ -16,6 +16,8 @@ model Project {
     description String
     tags String[]
     github_url String
+    live_url String?
     main_photo String
     photos String[]
+    featured Boolean @default(false)
 }
