@@ -1,9 +1,10 @@
 import React from 'react'
-import { getAllProjects } from '../../../../prisma/db/project'
+import { getFeaturedProjects } from '../../../../prisma/db/project'
 import Project from '../Project/Project';
+import Link from 'next/link';
 
-export default async function Projects() {
-    const projects = await getAllProjects(); 
+export default async function ProjectsGrid() {
+    const projects = await getFeaturedProjects(); 
 
     return (
         <section id="projects" className="projects d-flex align-items-center justify-content-center">
@@ -14,14 +15,10 @@ export default async function Projects() {
                 ))}
                 <hr />
 
-                <div className="projects-list">
-
-                    {/* <div className="see-more col-lg-12 mb-4">
-                        <a href="{% url 'projects' %}">
-                            <button className="btn btn-primary">See More</button>
-                        </a>
-                    </div> */}
-
+                <div className="see-more col-lg-12 mb-4">
+                    <Link href="projects">
+                        <button className="btn btn-primary">See More</button>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -1,0 +1,11 @@
+.project-list-item {
+    padding: 1em 0;
+}
+
+.project-list-item img {
+    width: 18.5em;
+}
+
+.project-list-item .project-tag {
+    font-family: monospace;
+}

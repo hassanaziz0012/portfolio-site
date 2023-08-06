@@ -29,9 +29,7 @@ export default function Project({ project, index }: {project: any, index: number
 
             <div className={`col-lg-6 project-info ${width < 992 ? "mt-3" : ""}`}>
                 <h4>{project.title}</h4>
-                <p className="text-start" style={{ whiteSpace: 'pre-line' }}>
-                    {project.description}
-                </p>
+                <p className="text-start" style={{ whiteSpace: 'pre-line' }} dangerouslySetInnerHTML={{ __html: project.description }} />
                 <hr />
                 <div className="col-md-12 row">
                     <div className="project-tags d-flex align-items-center justify-content-around col-md-12">
