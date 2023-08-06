@@ -7,9 +7,12 @@
 
 *, html, body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--dark-background-1);
     color: var(--light-background-1);
 }
+html, body {
+    background-color: var(--dark-background-1) !important;
+}
+
 
 section.hero {
     height: 100vh;
@@ -81,7 +84,7 @@ section.projects * {
     margin: 5em 0;
 }
 
-.project .project-tag {
+.project-tag {
     font-family: monospace;
 }
 
@@ -147,4 +150,13 @@ section.footer * {
 
 .footer-content {
     font-size: 14px;
+}
+
+/* misc */
+.list-style-none {
+    list-style: none;
+}
+
+table.table {
+    margin-bottom: 0;
 }
