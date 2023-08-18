@@ -83,14 +83,27 @@ export const createDefaultProjects = async () => {
     const projects = data.projects;
     for (let i = 0; i < projects.length; i++) {
         const proj = projects[i];
-        const result = await prisma.project.create({
-            data: {
+        const result = await prisma.project.upsert({
+            where: {
+                title: proj.title
+            },
+            update: {
                 title: proj.title,
                 description: proj.description,
                 github_url: proj.github_url,
                 live_url: proj.live_url,
                 main_photo: proj.main_photo,
-                tags: proj.tags
+                tags: proj.tags,
+                featured: proj.featured
+            },
+            create: {
+                title: proj.title,
+                description: proj.description,
+                github_url: proj.github_url,
+                live_url: proj.live_url,
+                main_photo: proj.main_photo,
+                tags: proj.tags,
+                featured: proj.featured
             }
         })
         console.log(result);
