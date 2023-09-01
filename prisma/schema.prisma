@@ -2,22 +2,24 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "postgresql"
-    url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Project {
-    id Int @id @default(autoincrement())
-    title String @unique
-    description String
-    tags String[]
-    github_url String
-    live_url String?
-    main_photo String
-    photos String[]
-    featured Boolean @default(false)
+  id          Int       @id @default(autoincrement())
+  title       String    @unique
+  description String
+  type        String    @default("Freelance")
+  tags        String[]
+  github_url  String
+  live_url    String?
+  detail_url  String?
+  main_photo  String
+  photos      String[]
+  featured    Boolean   @default(false)
 }
