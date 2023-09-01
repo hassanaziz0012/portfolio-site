@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import NavItem from '../NavItem/NavItem'
+import NavItem from '../HomeNavItem/HomeNavItem'
 
 export default function Nav() {
     const [width, setWidth] = useState<number>(1920);

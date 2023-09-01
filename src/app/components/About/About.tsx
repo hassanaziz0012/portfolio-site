@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../Nav/Nav'
+import Nav from '../HomeNav/HomeNav'
 import SocialIcons from '../SocialIcons/SocialIcons'
 
 export default function About() {
