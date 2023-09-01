@@ -9,12 +9,8 @@ export const metadata: Metadata = {
 
 export default function page() {
     return (
-        <div>
-            <div className="container mt-3">
-                <h4>
-                    <a href="/" className='link yellow-link'>Back</a>
-                </h4>
-            </div>
+        <div className='container'>
+            <h1>My Projects</h1>
             <ProjectsList />
         </div>
     )
