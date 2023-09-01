@@ -9,3 +9,29 @@
 .project-list-item .project-tag {
     font-family: monospace;
 }
+
+.project-list-item .skills-list {
+    margin: 0;
+}
+
+.project-list-item td * {
+    background-color: transparent;
+    padding: 0;
+}
+
+.projects-list .table tbody td, .table thead th {
+    background-color: var(--dark-background-1);
+    border-bottom: 1px solid var(--dark-background-3);
+    color: var(--light-background-1);
+}
+
+.projects-list .table tbody tr {
+    background-color: var(--dark-background-2);
+}
+.projects-list .table tbody td a {
+    background-color: var(--dark-background-2);
+}
+
+.projects-list .table td{
+    word-wrap: break-word;
+}

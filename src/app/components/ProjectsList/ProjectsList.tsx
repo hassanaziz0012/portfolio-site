@@ -7,21 +7,38 @@ export default async function ProjectsList() {
 
     return (
         <div className='projects-list container'>
-            {projects.map((project, i) => (
-                <div className='project-list-item d-flex align-items-start row' key={i}>
-                    <img src={project.main_photo} className='project-img col-lg-3' />
-                    <div className='col-lg-6'>
-                        <h4>{project.title}</h4>
-                        <p style={{ whiteSpace: 'pre-line' }}>{project.description}</p>
-                        <div className="project-tags d-flex justify-content-between">
-                            {project.tags.map((tag, i) => (
-                                <span className='project-tag' key={i}>{tag}</span>
-                            ))}
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-            ))}
+            <table className='table'>
+                <thead className='thead'>
+                    <tr>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Tags</th>
+                        <th>GitHub URL</th>
+                    </tr>
+                </thead>
+
+                <tbody className=''>
+                    {projects.map((project, i) => (
+                        <tr className='project-list-item' key={i}>
+                            <td>{project.title}</td>
+                            <td>{project.type}</td>
+                            <td>
+                                <ul className="skills-list d-flex flex-wrap">
+                                    {project.tags.map((tag, i) => (
+                                        <li className="skill-tag" key={i}>{tag}</li>
+                                    ))}
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="https://github.com/hassanaziz0012/bunnycdn-stream-api" className='bg-default'>
+                                    <i className="fa-brands fa-github fa-xl"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+
+            </table>
         </div>
     )
 }
