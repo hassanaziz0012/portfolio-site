@@ -182,6 +182,10 @@ a.link:hover::after {
     width: 100%;
 }
 
+li.nav-item a.link {
+    padding: 0.25rem 0.5rem;
+}
+
 a.yellow-link {
     color: var(--yellow-1);
 }
