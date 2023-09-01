@@ -30,7 +30,7 @@ export default async function ProjectsList() {
                                 </ul>
                             </td>
                             <td>
-                                <a href="https://github.com/hassanaziz0012/bunnycdn-stream-api" className='bg-default'>
+                                <a href={project.github_url} className='bg-default'>
                                     <i className="fa-brands fa-github fa-xl"></i>
                                 </a>
                             </td>
