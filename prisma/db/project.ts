@@ -77,6 +77,7 @@ export const editProject = async (
 }
 
 export const createDefaultProjects = async () => {
+    // You will likely need to clear cache (the .next folder) to read the latest contents of backup.json.
     console.log("Creating default projects.")
     const resp = await fetch('http://localhost:3000/backup.json');
     const data = await resp.json();
@@ -89,24 +90,27 @@ export const createDefaultProjects = async () => {
             },
             update: {
                 title: proj.title,
+                type: proj.type,
                 description: proj.description,
                 github_url: proj.github_url,
                 live_url: proj.live_url,
+                detail_url: proj.detail_url,
                 main_photo: proj.main_photo,
                 tags: proj.tags,
                 featured: proj.featured
             },
             create: {
                 title: proj.title,
+                type: proj.type,
                 description: proj.description,
                 github_url: proj.github_url,
                 live_url: proj.live_url,
+                detail_url: proj.detail_url,
                 main_photo: proj.main_photo,
                 tags: proj.tags,
                 featured: proj.featured
             }
         })
-        console.log(result);
     }
 }
 
