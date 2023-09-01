@@ -5,6 +5,7 @@ import './css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Script from 'next/script';
 import ThemeChangeButton from './components/ThemeChangeButton/ThemeChangeButton';
+import Navbar from './components/Navbar/Navbar';
 
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className='dark'>
-                <ThemeChangeButton />
+                <Navbar />
                 {children}
             </body>
             <Script src='https://kit.fontawesome.com/8f8a8c35a9.js' />
