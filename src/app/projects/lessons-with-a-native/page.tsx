@@ -1,19 +1,20 @@
 import React from 'react'
 import { Metadata } from 'next'
 import { getProject } from '../../../../prisma/db/project'
+import Page from '@/app/components/common/Page/Page'
 
 export const metadata: Metadata = {
     title: "Lessons With a Native - Hassan Aziz",
     description: "Language learning web app built with Django and the beautiful Nord theme."
 }
 
-export default async function Page() {
+export default async function page() {
     const project = await getProject(2)
     return (
-        <div>
+        <Page>
             <div className="container mt-3">
                 <h4>
-                    <a href="/" className='link yellow-link'>Back</a>
+                    <a href="/" className='link primary-link'>Back</a>
                     <hr />
                 </h4>
 
@@ -41,7 +42,7 @@ export default async function Page() {
                         {project?.live_url ? (
                             <div className="attribute">
                                 <h3>Live Demo</h3>
-                                <p><a href={project?.live_url || ""} className="link yellow-link">Click here</a></p>
+                                <p><a href={project?.live_url || ""} className="link primary-link">Click here</a></p>
                             </div>
                             )
                             :
@@ -50,7 +51,7 @@ export default async function Page() {
 
                         <div className="attribute">
                             <h3>Github</h3>
-                            <p><a href={project?.github_url} className="link yellow-link">Click here</a></p>
+                            <p><a href={project?.github_url} className="link primary-link">Click here</a></p>
                         </div>
                     </div>
 
@@ -119,6 +120,6 @@ export default async function Page() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Page>
     )
 }
