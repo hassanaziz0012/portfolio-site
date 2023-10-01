@@ -7,11 +7,12 @@ import navLinks from '@/utils/navLinks';
 export default function CommandPalette() {
     const [open, setOpen] = useState(false);
     const [selectedNavLinks, setSelectedNavLinks] = useState(navLinks.links);
-    const popupElem = useRef();
+    const popupElem = useRef<any>();
     const togglePalette = () => {
         setOpen(!open);
+        
         popupElem.current?.classList.toggle("active");
-        const section = document.querySelector("section.page");
+        const section: any = document.querySelector("section.page");
         if (section.style.filter === "none" || section.style.filter === "") {
             section.style.filter = "blur(20px)";
         } else {
@@ -25,7 +26,7 @@ export default function CommandPalette() {
         if (!popup || !popup.classList.contains("active")) {
             setOpen(false);
             popupElem.current?.classList.remove("active");
-            const section = document.querySelector("section.page");
+            const section: any = document.querySelector("section.page");
             section.style.filter = "none";
         }
     }
