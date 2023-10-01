@@ -1,0 +1,12 @@
+.h-card {
+    border-radius: 1em;
+    padding: 1em;
+}
+
+body.dark .h-card {
+    background-color: var(--primary-2);
+}
+
+body .h-card {
+    background-color: var(--secondary-1);
+}
