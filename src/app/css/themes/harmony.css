@@ -1,0 +1,27 @@
+body {
+    --foreground-1: #151316;
+    --foreground-2: #1F1C21;
+
+    --background-1: #E7E5DF;
+    --background-2: #E5E3DC;
+
+    --primary-1: #587B7F;
+    --primary-2: #547578;
+    
+    --secondary-1: #8093F1;
+    --secondary-2: #6C82EF;
+}
+
+body.dark {
+    --background-1: #151316;
+    --background-2: #1F1C21;
+
+    --foreground-1: #E7E5DF;
+    --foreground-2: #E5E3DC;
+
+    --primary-1: #587B7F;
+    --primary-2: #547578;
+    
+    --secondary-1: #8093F1;
+    --secondary-2: #6C82EF;
+}
