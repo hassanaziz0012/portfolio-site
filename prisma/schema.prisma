@@ -13,6 +13,7 @@ datasource db {
 model Project {
   id          Int       @id @default(autoincrement())
   title       String    @unique
+  short_description String?
   description String
   type        String    @default("Freelance")
   tags        String[]
