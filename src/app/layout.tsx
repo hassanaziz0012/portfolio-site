@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './css/nord.css';
 import './css/style.css';
+import './css/theme.css';
+// import './css/themes/nord.css';
+import './css/themes/harmony.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Script from 'next/script';
 import ThemeChangeButton from './components/ThemeChangeButton/ThemeChangeButton';
-import Navbar from './components/Navbar/Navbar';
 
 
 export const metadata: Metadata = {
@@ -22,7 +23,6 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className='dark'>
-                <Navbar />
                 {children}
             </body>
             <Script src='https://kit.fontawesome.com/8f8a8c35a9.js' />
