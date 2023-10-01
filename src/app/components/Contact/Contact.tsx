@@ -14,7 +14,7 @@ export default function Contact() {
                 <h1 className="section-heading text-center">Contact</h1>
                 <div className="row container pt-3 d-flex">
                     <div className="offset-lg-4 col-lg-4">
-                        <Card>
+                        <Card className={""}>
                             <h4>Get in touch</h4>
 
                             <p className='mb-0'>Send an email</p>
