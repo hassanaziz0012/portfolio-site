@@ -1,6 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import NavItem from '../HomeNavItem/HomeNavItem'
+import './HomeNav.css'
+
 
 export default function Nav() {
     const [width, setWidth] = useState<number>(1920);
@@ -23,16 +25,14 @@ export default function Nav() {
             {
             width > 768 ? (
                 <ul className="nav-list">
-                    <NavItem text='Projects' url='#projects' />
-                    <NavItem text='Skills' url='#skills' />
-                    <NavItem text='Contact' url='#contact' />
+                    <NavItem text='Projects' url='/projects' />
+                    <NavItem text='Contact' url='/contact' />
                 </ul>
                 )
                 :
                 <div className="nav-list row col-lg-6 mt-3 mb-5">
-                    <NavItem text='Projects' url='#projects' />
-                    <NavItem text='Skills' url='#skills' />
-                    <NavItem text='Contact' url='#contact' />
+                    <NavItem text='Projects' url='/projects' />
+                    <NavItem text='Contact' url='/contact' />
                 </div>
             }
         </div>
