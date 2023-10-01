@@ -20,6 +20,8 @@
 *.pem
 .env
 TODO.md
+backup.json
+src/app/admin/
 
 # debug
 npm-debug.log*
