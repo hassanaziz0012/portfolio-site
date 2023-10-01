@@ -1,0 +1,51 @@
+.command-palette {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.command-palette .launcher-container {
+    border-bottom: 1px solid var(--primary-1);
+    padding: 0.5em;
+    transition: background-color 0.5s ease;
+}
+
+.command-palette .launcher-container .launch-palette {
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+}
+
+.command-palette .launcher-container:hover {
+    background-color: var(--background-2);
+    /* background-color: var(--primary-1); */
+}
+
+.command-palette .popup {
+    background-color: var(--primary-1);
+}
+
+.command-palette .command-input {
+    width: 100%;
+    border-radius: 500px;
+    border: none;
+    padding: 0.35em 1em;
+    background-color: var(--background-1);
+    outline: none;
+}
+
+.command-palette .nav-links {
+    margin-top: 1em;
+    padding: 0;
+}
+
+.command-palette .nav-links li {
+    list-style: none;
+    padding: 0.3em;
+    width: 100%;
+}
+
+.command-palette .nav-links li:hover {
+    background-color: rgba(46, 46, 83, 0.1);
+}
