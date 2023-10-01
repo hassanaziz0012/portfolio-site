@@ -40,8 +40,8 @@ export default function CommandPalette() {
 
     useEffect(() => {
         if (open === true) {
-            document.querySelector("body").addEventListener("click", closePalette);
-            return () => document.querySelector("body").removeEventListener("click", closePalette);
+            document.querySelector("body")?.addEventListener("click", closePalette);
+            return () => document.querySelector("body")?.removeEventListener("click", closePalette);
         } else {
             document.addEventListener("keydown", togglePaletteByShortcut);
         }
@@ -52,7 +52,7 @@ export default function CommandPalette() {
             setSelectedNavLinks(navLinks.links);
         } else {
             const searchString = value.toLowerCase();
-            const results = [];
+            const results: any = [];
             const search = (link: { name: string; url: string; sublinks?: undefined; } | { name: string; url: string; sublinks: { name: string; url: string; }[]; }) => {
                 if (link.name.toLowerCase().includes(searchString)) {
                     results.push(link);
