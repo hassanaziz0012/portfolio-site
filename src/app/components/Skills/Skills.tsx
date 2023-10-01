@@ -7,6 +7,10 @@ export default function Skills() {
         <section id="skills" className="skills d-flex align-items-center justify-content-center">
             <div className="skills-section container d-flex flex-column align-items-center justify-content-center mt-3">
                 <h1 className="section-heading">Skills</h1>
+                <p>
+                    I&apos;ve worked with a ton of different tools over the years. Still, there are always fun new things to learn. 
+                    <span role='img' aria-label='smiley'> 😊</span>
+                </p>
 
                 <ul className="skills-list d-flex flex-wrap col-lg-9">
                     <li className="skill-tag">
