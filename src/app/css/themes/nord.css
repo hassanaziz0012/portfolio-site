@@ -1,0 +1,27 @@
+body {
+    --foreground-1: #2E3440;
+    --foreground-2: #3B4252;
+
+    --background-1: #D8DEE9;
+    --background-2: #E5E9F0;
+
+    --primary-1: #8FBCBB;
+    --primary-2: #88C0D0;
+    
+    --secondary-1: #8DA577;
+    --secondary-2: #A3BE8C;
+}
+
+body.dark {
+    --background-1: #2E3440;
+    --background-2: #3B4252;
+
+    --foreground-1: #D8DEE9;
+    --foreground-2: #E5E9F0;
+
+    --primary-1: #8FBCBB;
+    --primary-2: #88C0D0;
+    
+    --secondary-1: #8DA577;
+    --secondary-2: #A3BE8C;
+}

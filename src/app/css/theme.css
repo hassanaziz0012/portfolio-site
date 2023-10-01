@@ -1,0 +1,88 @@
+/* THIS FILE WILL CONTAIN ELEMENT STYLES BASED ON CHOSEN THEME. */
+
+
+/* TABLES - START */
+.table tbody td, .table thead th {
+    background-color: var(--background-2);
+    border-bottom: 1px solid var(--background-2);
+    color: var(--foreground-1);
+}
+.table tbody tr {
+    background-color: var(--background-2);
+}
+.table tbody td a {
+    background-color: var(--background-2);
+}
+
+/* TABLES - END */
+
+/* BUTTONS - START */
+.btn {
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color: var(--primary-1) !important;
+    border-color: var(--primary-1);
+}
+.btn-primary:hover {
+    background-color: var(--primary-2) !important;
+    border-color: var(--primary-2);
+}
+
+/* BUTTONS - END */
+
+/* LINKS - START */
+
+a.link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: var(--foreground-1);
+}
+
+a.link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: width 0.3s ease-out;
+    background-color: var(--foreground-1);
+}
+
+a.link:hover::after {
+    width: 100%;
+}
+
+li.nav-item a.link {
+    padding: 0.25rem 0.5rem;
+}
+
+a.primary-link {
+    color: var(--primary-1);
+}
+
+a.primary-link::after {
+    background-color: var(--primary-1);
+}
+
+a.secondary-link {
+    color: var(--secondary-1);
+}
+
+a.secondary-link::after {
+    background-color: var(--secondary-1);
+}
+
+/* LINKS - END */
+
+
+/* OTHER - START */
+
+hr {
+    color: var(--background-2);
+}
+
+/* OTHER - END */
