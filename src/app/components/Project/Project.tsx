@@ -30,7 +30,7 @@ export default function Project({ project, index }: {project: any, index: number
             <div className={`col-lg-6 project-info ${width < 992 ? "mt-3" : ""}`}>
                 <h4>
                     {project.detail_url ? (
-                        <a href={project.detail_url} className="link yellow-link">
+                        <a href={project.detail_url} className="link primary-link">
                             {project.title}
                         </a>
                         )
