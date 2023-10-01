@@ -91,6 +91,7 @@ export const createDefaultProjects = async () => {
             update: {
                 title: proj.title,
                 type: proj.type,
+                short_description: proj.short_description,
                 description: proj.description,
                 github_url: proj.github_url,
                 live_url: proj.live_url,
@@ -102,6 +103,7 @@ export const createDefaultProjects = async () => {
             create: {
                 title: proj.title,
                 type: proj.type,
+                short_description: proj.short_description,
                 description: proj.description,
                 github_url: proj.github_url,
                 live_url: proj.live_url,
@@ -114,10 +116,18 @@ export const createDefaultProjects = async () => {
     }
 }
 
-export const deleteProject = async (id: number) => {
+export const deleteProjectById = async (id: number) => {
     await prisma.project.delete({
         where: {
-            title: "Lessons With A Native"
+            id
+        }
+    })
+}
+
+export const deleteProjectByTitle = async (title: string) => {
+    await prisma.project.delete({
+        where: {
+            title
         }
     })
 }
