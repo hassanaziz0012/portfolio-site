@@ -1,3 +1,7 @@
+.social-links {
+    display: flex;
+}
+
 .social-links.nohover i:hover {
     color: var(--foreground-2);
 }
