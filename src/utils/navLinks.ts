@@ -1,3 +1,7 @@
+import socialLinks from "./socialLinks";
+
+const emailUrl = socialLinks.filter((link) => link.name === "Email")[0].url;
+
 const navLinks = {
     links: [
         {
@@ -7,7 +11,7 @@ const navLinks = {
         },
         {
             name: "Contact",
-            url: "/contact",
+            url: emailUrl,
             type: "link"
         },
         {
