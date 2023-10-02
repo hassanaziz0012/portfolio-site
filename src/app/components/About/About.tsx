@@ -20,9 +20,9 @@ export default function About() {
         <section className="hero about-section d-flex align-items-center justify-content-center">
             <div className="row d-flex align-items-center justify-content-center container">
                 <div className="hero-section col-md-6">
-                    <h1>{aboutInfo.headline}</h1>
-                    <h4>{aboutInfo.subheadline}</h4>
-                    <p>{aboutInfo.description}</p>
+                    <h1 className='title'>{aboutInfo.headline}</h1>
+                    <h4 className='subheader'>{aboutInfo.subheadline}</h4>
+                    <p className='description'>{aboutInfo.description}</p>
 
                     <div className="hero-buttons mt-4">
                         {/* <button className="btn btn-secondary" style={{ borderColor: "#3B4252" }}>
