@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import HLoader from '../HLoader/HLoader';
 import Navbar from '../Navbar/Navbar';
 import { setInitialTheme } from '@/utils/themes';
+import './Page.css';
 
 export default function Page({ children }) {
     const [loading, setLoading] = useState(true);
