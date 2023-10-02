@@ -2,7 +2,13 @@ import { writeFile } from "fs";
 import { prisma } from "./client";
 
 export const getAllProjects = async () => {
-    const projects = await prisma.project.findMany();
+    const projects = await prisma.project.findMany({
+        orderBy: [
+            {
+                order: "asc"
+            }
+        ]
+    });
     return projects;
 }
 
@@ -98,7 +104,8 @@ export const createDefaultProjects = async () => {
                 detail_url: proj.detail_url,
                 main_photo: proj.main_photo,
                 tags: proj.tags,
-                featured: proj.featured
+                featured: proj.featured,
+                order: proj.order
             },
             create: {
                 title: proj.title,
@@ -110,7 +117,8 @@ export const createDefaultProjects = async () => {
                 detail_url: proj.detail_url,
                 main_photo: proj.main_photo,
                 tags: proj.tags,
-                featured: proj.featured
+                featured: proj.featured,
+                order: proj.order
             }
         })
     }

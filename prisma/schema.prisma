@@ -23,4 +23,5 @@ model Project {
   main_photo  String
   photos      String[]
   featured    Boolean   @default(false)
+  order       Int       @default(autoincrement())
 }
