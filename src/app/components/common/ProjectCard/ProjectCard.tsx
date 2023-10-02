@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react'
 import './ProjectCard.css'
 import Card from '../Card/Card'
 import Link from 'next/link'
+import FAIcon from '../FAIcon/FAIcon'
 
 export default function ProjectCard({ project, extraClasses }) {
     const renderProject = () => (
@@ -18,6 +19,18 @@ export default function ProjectCard({ project, extraClasses }) {
                     {project.tags.map((tag, i) => (
                         <span className="project-tag" key={i}>{tag}</span>
                     ))}
+                    {
+                        project.github_url ?
+                        <a className='github-icon' href={project.github_url}>
+                            <FAIcon icon='fa-brands fa-github' />
+                        </a>
+                        : ""
+                    }
+                    {
+                        project.live_url ?
+                        <a href={project.live_url} className="live-url link">See Live</a>
+                        : ""
+                    }
                 </div>
             </div>
         </>

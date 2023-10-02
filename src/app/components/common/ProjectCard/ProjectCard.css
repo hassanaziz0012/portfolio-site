@@ -80,6 +80,15 @@
     cursor: default;
 }
 
+.project-card .details .github-icon {
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+.project-card .details .live-url {
+    margin-left: 10px;
+}
+
 @media screen and (max-width: 1200px) {
     .project-card .details .title {
         font-size: 1.2em;
