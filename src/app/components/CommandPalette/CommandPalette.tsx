@@ -11,7 +11,6 @@ export default function CommandPalette() {
     const popupElem = useRef<any>();
     const togglePalette = () => {
         setOpen(!open);
-        
         popupElem.current?.classList.toggle("active");
         const section: any = document.querySelector("section.page");
         if (section.style.filter === "none" || section.style.filter === "") {
@@ -21,28 +20,37 @@ export default function CommandPalette() {
         }
     }
 
-    const closePalette = (e) => {
+    const closePalette = () => {
         // Make sure that user clicked outside popup.
+        setOpen(false);
+        popupElem.current?.classList.remove("active");
+        const section: any = document.querySelector("section.page");
+        section.style.filter = "none";
+    }
+
+    const shouldClosePalette = (e) => {
         const popup = e.target.closest(".popup");
         if (!popup || !popup.classList.contains("active")) {
-            setOpen(false);
-            popupElem.current?.classList.remove("active");
-            const section: any = document.querySelector("section.page");
-            section.style.filter = "none";
+            closePalette();
         }
     }
 
     const togglePaletteByShortcut = (e) => {
         if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+            e.preventDefault();
             // The user pressed either CTRL + K (on Windows/Linux) or Command + K (on macOS)
             togglePalette();            
+        }
+        // Close palette by Esc key.
+        if (e.key.toLowerCase() === "escape") {
+            closePalette();
         }
     }
 
     useEffect(() => {
         if (open === true) {
-            document.querySelector("body")?.addEventListener("click", closePalette);
-            return () => document.querySelector("body")?.removeEventListener("click", closePalette);
+            document.querySelector("body")?.addEventListener("click", shouldClosePalette);
+            return () => document.querySelector("body")?.removeEventListener("click", shouldClosePalette);
         } else {
             document.addEventListener("keydown", togglePaletteByShortcut);
         }
@@ -54,7 +62,7 @@ export default function CommandPalette() {
         } else {
             const searchString = value.toLowerCase();
             const results: any = [];
-            const search = (link: { name: string; url: string; sublinks?: undefined; } | { name: string; url: string; sublinks: { name: string; url: string; }[]; }) => {
+            const search = (link) => {
                 if (link.name.toLowerCase().includes(searchString)) {
                     results.push(link);
                 }
@@ -78,7 +86,6 @@ export default function CommandPalette() {
 
             <Popup reference={popupElem}>
                 <input type="text" name="command" id="command" placeholder='Search for pages or projects' className='command-input' onChange={(e) => searchNavLinks(e.target.value)} autoFocus />
-                {/* <p className='text-sm text-muted'>*This currently only searches my projects.</p> */}
                 <hr />
                 <ul className="nav-links">
                     {selectedNavLinks.map((link, i) => (
