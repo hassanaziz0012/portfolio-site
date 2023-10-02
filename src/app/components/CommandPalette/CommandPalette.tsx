@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './CommandPalette.css'
 import Popup from '../common/Popup/Popup';
 import navLinks from '@/utils/navLinks';
+import SocialIcons from '../SocialIcons/SocialIcons';
 
 export default function CommandPalette() {
     const [open, setOpen] = useState(false);
@@ -84,6 +85,8 @@ export default function CommandPalette() {
                         <li className="nav-item" key={i}><a href={link.url} className="nav-link" download={link.type === "download" ? true : false} >{link.name}</a></li>
                     ))}
                 </ul>
+                <hr />
+                <SocialIcons style="nohover" />
             </Popup>
         </div>
     )
