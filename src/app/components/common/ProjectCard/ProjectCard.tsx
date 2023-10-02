@@ -14,7 +14,7 @@ export default function ProjectCard({ project, extraClasses }) {
                 <h3 className='title'>{project.title}</h3>
                 <p className="description">{project.short_description}</p>
 
-                <div className="tags">
+                <div className="tags d-flex align-items-center justify-content-start flex-wrap">
                     {project.tags.map((tag, i) => (
                         <span className="project-tag" key={i}>{tag}</span>
                     ))}
