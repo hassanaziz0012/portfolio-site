@@ -19,7 +19,7 @@ export default async function page() {
                 </h4>
 
                 <div className="main-image">
-                    <img src={`/${project?.main_photo}`} alt="" className='img-fluid' />
+                    <img src={`${project?.main_photo}`} alt="" className='img-fluid' />
                 </div>
 
                 <h1>{project?.title}</h1>
